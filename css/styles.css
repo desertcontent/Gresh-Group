@@ -1,0 +1,543 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+
+}
+
+footer{margin-top:15px;}
+
+.rounded   {
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+}
+.boxshad{
+   -moz-box-shadow:     0 0 5px #2A4055;
+   -webkit-box-shadow:   0 0 5px #2A4055;
+   box-shadow:  0px 0px 5px #2A4055;
+     }
+.fade {
+  opacity: 0.5;
+  /* Opacity for Modern Browsers */
+
+  filter: alpha(opacity=50);
+  /* Opacity for IE8 and lower */
+
+  zoom: 1;
+  /* Fix for IE7 */
+
+}
+*.hoverfade:hover {
+  opacity: 0.5;
+  /* Opacity for Modern Browsers */
+
+  filter: alpha(opacity=50);
+  /* Opacity for IE8 and lower */
+
+  zoom: 1;
+  /* Fix for IE7 */
+
+}
+a.darken {
+  display: inline-block;
+  background: black;
+  padding: 0;
+}
+a.darken img {
+  display: block;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+*.darken:hover img {
+  opacity: 0.7;
+}
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+.carousel-wrapper{padding-left:0px;padding-right:0px;background-color: transparent;}
+/* Carousel base class */
+.carousel {
+/* height: 500px; */
+margin-top: 70px;
+  margin-bottom:  10px;
+ /* width: 100vw; 
+    height: 40.66vw; /* 100/56.25 = 1.778 */
+ /*   background: pink;
+    max-height: 100vh;
+    max-width: 245.90vh; /* 16/9 = 1.778 */
+    /* margin: auto;  */
+     /*  position: absolute;  */
+   /*   top:0;bottom:0; /* vertical center */
+   /*   left:0;right:0; /* horizontal center */
+   width: 100%;
+    height: 40.66%; 
+/*padding-bottom: 40.66%; */ 
+border-bottom:0px solid #555;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 1;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+   border-radius: 15px 15px 15px 15px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+  padding: 20px;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+ /* height: 500px; */
+  background-color: transparent;
+  /* width: 100vw; 
+    height: 40.66vw; /* 100/56.25 = 1.778 */
+ /*    background: pink;
+    max-height: 100vh;
+    max-width: 245.90vh;  /* 16/9 = 1.778 */
+    /* margin: auto;  */
+    /*   position: absolute;  
+      top:0;bottom:0; /* vertical center */
+    /*   left:0;right:0; /* horizontal center */
+     width:100%;
+     text-align:center;
+
+   /*  padding-bottom: 40.66%;  */
+}
+
+.carousel-inner > .item > img {
+/*  position: absolute;
+  top: 0;
+  left: 0;
+   width: 100%;
+  height: 500px;
+ width: 100vw; 
+    height: 40.66vw; /* 100/56.25 = 1.778 */
+     background: transparent; 
+
+ /*   max-height: 100vh;
+    max-width: 245.90vh; /* 16/9 = 1.778 */
+    /* margin: auto;  */
+     /*   position: absolute;  */
+      top:0;bottom:0; /* vertical center */
+      left:0;right:0; /* horizontal center */
+      width:100%;
+      max-height:550px;
+}
+.carousel-indicators{ bottom:10px;}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+.marketing {margin-top:15px;}
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+  .featurette-heading2 {
+    margin-top: 15px;
+  }
+}
+.sites, .govtrel, .polconsult, .mediaaff, .commstrat, .mediatrain, .resources, .legislative, .meet{
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
+  .sites, .govtrel, .polconsult, .mediaaff, .commstrat, .mediatrain, .resources, .legislative  {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 80px;
+
+  }
+  .meet{
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 80px;
+
+  }
+}
+.portfolio-item {
+  margin-bottom: 25px;
+}
+.portfolio-item h3 {
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .contactform {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px;
+  }
+}
+.red {
+  color: #ff0000;
+}
+.vendorblock {
+  text-align: center;
+}
+.vendorblock img {
+  width: 125px;
+  margin: 15px;
+}
+.panel-title a i {
+  float: right;
+}
+
+#portrait-wrap{/*min-height:460px;height:460px;*/text-align:center;width: 300px;
+     }
+#portrait-posterbox{min-height:435px; text-align:center;}
+.portrait {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  margin: 10px;
+  margin-left:30px;
+
+}
+#map-outer {
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px solid #CCC;
+  margin-bottom: 20px;
+  background-color: #FFF;
+}
+@media (min-width: 768px) {
+  #map-outer {
+     margin-top: 80px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+#map-container {
+  min-height: 475px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.alttext{display:none;}
+@media (max-width: 768px) {
+  #map-outer {
+    min-height: 475px;
+  }
+  .carousel {margin-top:50px;}
+
+  .carousel-caption h1{font-size:20px;margin:0px;margin-bottom:5px;padding:0px;}
+  .carousel-caption p{display:none;}
+  .gresh-splash{background-color: rgba(0, 0, 0, 0.0);}
+   .carousel-caption .meettext{display:none;} 
+  .carousel-caption .alttext{display:block; font-weight:bold;color:#5a5a5a;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}
+}
+@media (min-width: 769px) {.gresh-splash{background-color: rgba(0, 0, 0, 0.6);}}
+p.contact_txt {
+    float: left;
+    font-size: 9.5pt;
+    line-height: 20px;
+    padding-top: 0px;
+    width: 280px;
+}
+
+img.linked {
+    vertical-align: middle;
+    margin-left:25px;
+    padding-bottom:5px; 
+    
+}
+
+.whitepaperst{
+  margin-top:25px;
+
+  border-top-right-radius: 20px;
+   border-top-left-radius: 20px;
+ }
+
+ .whitepapersb{
+    margin-bottom:25px;
+  border-bottom-right-radius: 20px;
+   border-bottom-left-radius: 20px;
+ }
+
+.whitepapers > div > a {min-height: 90px;}
+.whitepapers > div > a > img{margin-right:10px;}
+.whitepapers > div > a > p{color:#aaa;}
+
+
+.thumb-valign{vertical-align:middle; !important;}
+
+.clients-bg-G{background: transparent url(/img/dome_bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.clients-bg-P{background: transparent url(/img/seals.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.clients-bg-A{background: transparent url(/img/pr_word_wall.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.clients-bg-M{background: transparent url(/img/media_training_bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.clients-bg-V{background: transparent url(/img/vid_prod_bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.clients-bg-T{background: transparent url(/img/bubble.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+
+@media (min-width: 768px) {
+.clients-bg-G{background: transparent url(/img/dome_bg.png) top right no-repeat;background-size:cover;min-height:850px;margin-bottom:10px;padding:15px;}
+.clients-bg-P{background: transparent url(/img/seals.png) top right no-repeat;background-size:cover;min-height:850px;margin-bottom:10px;padding:15px;}
+.clients-bg-A{background: transparent url(/img/pr_word_wall.png) top right no-repeat;background-size:cover;min-height:850px;margin-bottom:10px;padding:15px;}
+.clients-bg-M{background: transparent url(/img/media_training_bg.png) top right no-repeat;background-size:cover;min-height:850px;margin-bottom:10px;padding:15px;}
+.clients-bg-V{background: transparent url(/img/vid_prod_bg.png) top right no-repeat;background-size:cover;min-height:850px;margin-bottom:10px;padding:15px;}
+.clients-bg-T{background: transparent url(/img/bubble.png) top right no-repeat;background-size:cover;min-height:850px;margin-bottom:10px;padding:15px;}
+}
+
+
+.govtrel-bg {background: transparent url(/img/dome_bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.polconsult-bg{background: transparent url(/img/seals.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.mediaaff-bg{background: transparent url(/img/media_training_bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.commstrat-bg{background: transparent url(/img/commstrat-bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+.mediatrain-bg{background: transparent url(/img/vid_prod_bg.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}
+/*.resources-bg{background: transparent url(/img/nevada-county-map-large.png) top right no-repeat;background-size:cover;margin-bottom:10px;padding:15px;}*/
+
+
+@media (min-width: 768px) {
+
+.govtrel-bg {background: transparent url(/img/dome_bg.png) top right no-repeat;background-size:cover;min-height:550px;margin-bottom:10px;padding:15px;}
+.polconsult-bg{background: transparent url(/img/seals.png) top right no-repeat;background-size:cover;min-height:550px;margin-bottom:10px;padding:15px;}
+.mediaaff-bg{background: transparent url(/img/media_training_bg.png) top right no-repeat;background-size:cover;min-height:550px;margin-bottom:10px;padding:15px;}
+.commstrat-bg{background: transparent url(/img/commstrat-bg.png) top right no-repeat;background-size:cover;min-height:550px;margin-bottom:10px;padding:15px;}
+.mediatrain-bg{background: transparent url(/img/vid_prod_bg.png) top right no-repeat;background-size:cover;min-height:550px;margin-bottom:10px;padding:15px;}
+.resources-bg{background: transparent url(/img/nevada-county-map-large.png) top right no-repeat;background-size:100% auto;min-height:550px;margin-bottom:10px;padding:15px;}
+}
+
+.transparent{background: transparent;}
+.transparent li{background: transparent;border:none;padding:1px 0px;}
+.transparent img{height:25px;margin-right:10px;}
+
+.margtop{margin-top:50px;}
+@media (min-width: 768px) {
+.margtop {margin-top:80px;}
+ }
+
+ .sites > .row > div h3.logohead { padding-top:0px;margin-top:20px;margin-bottom:20px;}
+.legislative  > .row > div h3.logohead ,.resources  > .row > div h3.logohead ,.govtrel  > .row > div h3.logohead , .polconsult  > .row > div h3.logohead , .mediaaff  > .row > div h3.logohead , .commstrat  > .row > div h3.logohead , .mediatrain > .row > div h3.logohead { padding-top:0px;margin-top:10px;margin-bottom:0px;}
+
+@media (min-width: 768px) {
+
+ .sites > .row > div h3.logohead { padding-top:0px;margin-top:20px;margin-bottom:50px;}
+.legislative  > .row > div h3.logohead ,.resources  > .row > div h3.logohead ,.govtrel  > .row > div h3.logohead , .polconsult  > .row > div h3.logohead , .mediaaff  > .row > div h3.logohead , .commstrat  > .row > div h3.logohead , .mediatrain > .row > div h3.logohead { padding-top:0px;margin-top:20px;margin-bottom:20px;}
+
+}
+ /* tab color */
+.nav-tabs>li>a {
+  background-color: #00694a; 
+  border-color: #777777;
+  color:#fff;
+}
+
+/* active tab color */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  color: #ffffff;
+  background-color: #000;
+  border: 1px solid #888888;
+}
+
+/* hover tab color */
+.nav-tabs>li>a:hover {
+  border-color: #000000;
+  background-color: #111111;
+}
+
+.panel-default > .panel-heading {
+    background-color: #00694a;
+    border-color: #00694a;
+    color: #fff;
+
+}
+
+.btn-success {
+    background-color: #00694a;
+    border-color: #00746b;
+    color: #fff;
+} 
+
+.navbar-brand {
+     
+    padding: 15px;
+    padding-top:4px;
+}
+.navbar-brand img{
+     
+    height:40px;
+}
+.indent{padding-left:40px;}
+
+.panemin{min-height:1200px;}
+
+.about {margin-top:50px;}
+@media (min-width: 768px) {
+  .about {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 80px;
+
+  }
+}
+.imgmarg{margin:15px;}
+.marg-right{margin-right:15px;}
+.marg-bottom{margin-bottom:15px;}
+.marg-left{margin-left:15px;}
+.marg-top{margin-top:15px;}
+.pad-left{padding-left:15px;}
+.marg-top20{margin-top:20px;}
+.marg-top30{margin-top:30px;}
+.marg-top50{margin-top:50px;}
+.pad-right{padding-right:15px;}
+.pad-top{padding-top:15px;}
+.about h3{font-size:22px;}
+.breadcrumb {background-color:#fff;margin-bottom:0px;}
+#walkon{background-color:#000000;}
+
+#mylogo {position:relative;top:-90px;z-index:-1;}
+.navbutton{height:35px; padding:0px;vertical-align:baseline;margin-top:-5px;}
+.star-text{vertical-align:middle;}
+.star{vertical-align:middle;}
+.meet-bg{background: transparent url(/img/nevada_state_thumbnail.png)  50px 0 no-repeat; margin-bottom:10px;padding:15px;min-height:200px;}
+
+@media (min-width: 768px) and (max-width:992px){
+div.whitepapers > div > a > h6{font-size:11px;}
+div.navbar-nav > li > a {padding:5px;font-size:11px;}
+.nav > li > a {padding:5px;padding-top:15px;padding-bottom:15px;font-size:13px;}
+}
+
+
+
+@media (max-width: 768px){
+/*#buttonbox{display:none;}*/
+#portrait-posterbox{min-height:335px;}
+}
+
+.greentext{color: #006f3b;font-weight:bold;}
+
+
+.gresh-splash { 
+padding:10px;
+padding-bottom:20px;
+margin-bottom: 10px;
+bottom:10px;
+
+/*background:#00694a; */
+/* background-color: rgba(0, 0, 0, 0.6);*/
+}  
+
+.gresh-splash h1{color:#fff;margin-bottom:0px;margin-top:0px;}
+.gresh-splash p{color:#fff;margin-bottom:0px;margin-top:0px;}
+
+
+.magicg {background-color:transparent;z-index:0;}
+
+@media (max-width: 989px) {
+  #logoswoosh2{display:none;}
+  .gresh-splash h1{font-size:20px;}
+  .gresh-splash p{font-size:15px;}
+}
+
+@media (min-width: 990px) {
+#logoswoosh2{width:410px;}
+.gcontain{position:absolute;top: 16px;left:284px;z-index:-1;}
+}
+@media (min-width: 1199px){
+#logoswoosh2{width:492px;}
+.gcontain{position:absolute;top: 34px;left:343px;z-index:-1;}
+}
+.gresh-splash .alttext {font-size:13px;}
+@media (min-width: 550px){.gresh-splash .alttext{font-size:24px; margin-bottom:50px;margin-top:0px;}}
+@media (min-width: 768px){.gresh-splash .alttext{  margin-bottom:10px;margin-top:0px;}}
